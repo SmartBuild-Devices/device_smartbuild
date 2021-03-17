@@ -15,11 +15,11 @@
 #  
 
 ###########################################################
-## Determine SMARTBUILD_RELEASE if not already set
+## Determine SMARTBUILD_LUNCH_OPT if not already set
 ###########################################################
 
-define smartbuild-determine-release
-ifndef $(SMARTBUILD_RELEASE)
-  SMARTBUILD_RELEASE := $(shell device/smartbuild/tools/determine-release.sh)
+define smartbuild-determine-lunch-opt
+ifndef SMARTBUILD_LUNCH_OPT
+  SMARTBUILD_LUNCH_OPT := $(shell device/smartbuild/tools/determine-lunch-opt.sh)
 endif
 endef
